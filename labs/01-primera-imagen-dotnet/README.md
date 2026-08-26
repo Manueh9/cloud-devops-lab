@@ -129,9 +129,10 @@ JSON servido desde el contenedor. Objetivo cumplido.
 ```console
 $ docker images
 REPOSITORY   TAG   IMAGE ID   CREATED   SIZE
-dockerlab    v1    ...        ...       <!-- PENDIENTE: pega aquí tu salida real -->
-```
+dockerlab    v1    ...        ...       343MB 
 
+
+```
 Este número es el **punto de partida del lab 02**. Va a ser grande (del orden de cientos de
 MB, probablemente más de 800) porque la imagen incluye el SDK completo de .NET, que solo
 hace falta para compilar, no para ejecutar.
