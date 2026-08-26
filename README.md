@@ -5,8 +5,7 @@ Vengo de C#/.NET y en Cloud/DevOps empiezo de cero, así que todo está explicad
 habría gustado que me lo explicaran a mí: **primero el concepto en lenguaje llano, después
 el comando**.
 
-> Si estás empezando con Docker, este repo te sirve. No hay nada avanzado aquí: hay
-> lo básico, bien explicado y probado en una máquina real.
+> Si estás empezando con Docker, este repo te sirve. Iré documentando mis avances con apuntes y toda la información posible para que cualquiera pueda aprender Docker fácilmente 
 
 ---
 
