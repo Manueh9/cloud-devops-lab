@@ -1,0 +1,40 @@
+# ---- .NET ----
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ---- Build / publish ----
+[Dd]ebug/
+[Rr]elease/
+[Pp]ublish/
+*.dll
+*.exe
+*.pdb
+
+# ---- Secretos y configuración local ----
+appsettings.Development.json
+appsettings.Local.json
+.env
+*.env
+secrets.json
+
+# ---- IDE ----
+.vs/
+.vscode/
+.idea/
+*.swp
+
+# ---- Sistema operativo ----
+.DS_Store
+Thumbs.db
+
+# ---- Docker ----
+# (los Dockerfile SÍ se suben: son parte de los apuntes)
+docker-compose.override.yml
