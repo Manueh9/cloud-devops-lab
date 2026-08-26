@@ -53,10 +53,9 @@ Cada lab se puede reproducir tal cual: clona, entra en la carpeta y sigue su REA
 
 ## Por qué existe este repo
 
-Estoy siguiendo un plan de estudio semanal de Cloud/DevOps: **Docker → Kubernetes →
-Terraform → CI/CD → Azure → Observabilidad**. Un bloque por semana, un solo paso pequeño
-cada vez. Escribir los apuntes es parte del método: si no soy capaz de explicarlo, es que
-no lo he entendido.
+Estoy siguiendo un plan de estudio semanal de Cloud/DevOps: 
+**Docker → Kubernetes → Terraform → CI/CD → Azure → Observabilidad**. 
+Un bloque por semana, un solo paso pequeño cada vez.
 
 Si algo está mal explicado o directamente equivocado, abre un issue. Se agradece.
 
