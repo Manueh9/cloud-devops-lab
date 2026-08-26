@@ -127,15 +127,26 @@ JSON servido desde el contenedor. Objetivo cumplido.
 ### Tamaño de la imagen
 
 ```console
-$ docker images
-REPOSITORY   TAG   IMAGE ID   CREATED   SIZE
-dockerlab    v1    ...        ...       343MB 
-
-
+$ docker images dockerlab
+IMAGE          ID             DISK USAGE   CONTENT SIZE   EXTRA
+dockerlab:v1   96271c562337       1.28GB          343MB    U
 ```
-Este número es el **punto de partida del lab 02**. Va a ser grande (del orden de cientos de
-MB, probablemente más de 800) porque la imagen incluye el SDK completo de .NET, que solo
-hace falta para compilar, no para ejecutar.
+
+Ojo a las dos columnas, porque confunden:
+
+- **DISK USAGE (1,28 GB)** → lo que ocupa de verdad en el disco, con las capas ya
+  descomprimidas. Es el número que duele.
+- **CONTENT SIZE (343 MB)** → lo que pesa el contenido comprimido, tal como viajaría al
+  descargarse de un registro.
+
+> Es la diferencia entre lo que pesa un `.zip` y lo que ocupa una vez descomprimido.
+
+**1,28 GB para servir un JSON de cinco líneas.** La razón es que la imagen incluye el
+**SDK completo de .NET**: unas herramientas de compilación que hacen falta para
+*construir* el proyecto, pero que no pinta nada arrastrar en *ejecución*. En el lab 02 se
+separan las dos cosas con un multi-stage build y se compara el antes y el después.
+
+(La `U` de EXTRA significa "In Use": hay un contenedor usando esta imagen.)
 
 ---
 
