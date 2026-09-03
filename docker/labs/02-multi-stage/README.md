@@ -66,20 +66,28 @@ IMAGE          ID             DISK USAGE   CONTENT SIZE   EXTRA
 dockerlab:v2   3ebab80a7c89        324MB         91.2MB    U   
 ```
 
-</section>
+
 
 ### Comparativa
 
 | Imagen | Imagen base | DISK USAGE | Reducción |
 |---|---|---|---|
 | `dockerlab:v1` (una etapa) | `dotnet/sdk:8.0` | 1,28 GB | — |
-| `dockerlab:v2` (multi-stage) | `dotnet/aspnet:8.0` | `<<PEGA AQUÍ>>` | `<<PEGA AQUÍ>>` % |
+| `dockerlab:v2` (multi-stage) | `dotnet/aspnet:8.0` | 324MB | 74,7 % |
 
 ### Salida del `curl`
 
-```json
-<<PEGA AQUÍ la respuesta real del endpoint desde la v2>>
+```console
+$ curl http://localhost:8081/weatherforecast
+
+[{"date":"2026-09-04","temperatureC":49,"summary":"Scorching","temperatureF":120},
+ {"date":"2026-09-05","temperatureC":38,"summary":"Warm","temperatureF":100},
+ {"date":"2026-09-06","temperatureC":18,"summary":"Mild","temperatureF":64},
+ {"date":"2026-09-07","temperatureC":-10,"summary":"Cool","temperatureF":15},
+ {"date":"2026-09-08","temperatureC":41,"summary":"Scorching","temperatureF":105}]
 ```
+
+</section>
 
 ---
 
