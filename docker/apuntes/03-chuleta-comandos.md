@@ -107,6 +107,15 @@ docker stop api && docker rm api                      # 6. recoger
 
 ---
 
+## Otros comandos
+
+```bash
+docker build -f docker/labs/02-multi-stage/Dockerfile -t dockerlab:v2 app/DockerLab
+
+```
+
+
+---
 ## Para leer más
 
 - [Docker CLI reference](https://docs.docker.com/reference/cli/docker/) (doc oficial)
