@@ -113,6 +113,9 @@ curl http://localhost:8080/weatherforecast
 
 ## Resultado
 
+<details>
+<summary>Solución</summary>
+
 ```console
 $ curl http://localhost:8080/weatherforecast
 [{"date":"2026-08-27","temperatureC":-14,"summary":"Chilly","temperatureF":7},
@@ -122,7 +125,8 @@ $ curl http://localhost:8080/weatherforecast
  {"date":"2026-08-31","temperatureC":15,"summary":"Mild","temperatureF":58}]
 ```
 
-JSON servido desde el contenedor. Objetivo cumplido.
+</details>
+
 
 ### Tamaño de la imagen
 
@@ -170,4 +174,6 @@ separan las dos cosas con un multi-stage build y se compara el antes y el despu�
 
 ---
 
-⬅️ [Volver al índice del repo](../../README.md)
+⬅️ Anterior: (este es el primero)
+➡️ Siguiente: [Lab 02 · Multi-stage build](../02-multi-stage/)
+🏠 [Índice de Docker](../../README.md) · [Portada del repo](../../../README.md)

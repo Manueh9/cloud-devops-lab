@@ -1,52 +1,67 @@
-# 🐳 docker-lab — Aprendiendo Docker desde cero
-
-Apuntes y laboratorios de mi aprendizaje de **Docker**, escritos mientras lo aprendo.
-Vengo de C#/.NET y en Cloud/DevOps empiezo de cero, así que todo está explicado como me
-habría gustado que me lo explicaran a mí: **primero el concepto en lenguaje llano, después
-el comando**.
-
-> Si estás empezando con Docker, este repo te sirve. Iré documentando mis avances con apuntes y toda la información posible para que cualquiera pueda aprender Docker fácilmente 
+# ☁️ cloud-devops-lab — Aprendiendo Cloud y DevOps desde cero
 
 ---
 
-## Cómo usar este repo
-
-- **`apuntes/`** → la teoría, en orden. Léelos seguidos si empiezas de cero.
-- **`labs/`** → los ejercicios prácticos, uno por sesión. Cada lab es una carpeta
-  autocontenida con su propio README: objetivo, pasos, resultado y los errores con los
-  que me topé.
-
-Cada lab se puede reproducir tal cual: clona, entra en la carpeta y sigue su README.
+## Cómo está organizado
+ 
+```
+cloud-devops-lab/
+├── app/                → la aplicación de ejemplo. Siempre la misma, para todos los labs
+│   └── DockerLab/      → una Web API de .NET recién generada, sin nada especial
+└── <tecnología>/       → docker/, y más adelante kubernetes/, terraform/, cicd/…
+    ├── README.md       → índice de esa tecnología: apuntes, labs y estado
+    ├── apuntes/        → la teoría, numerada y en orden (01-, 02-, 03-…)
+    └── labs/           → un ejercicio por sesión (01-nombre/, 02-nombre/…), con su README
+```
+ 
+**Una carpeta por tecnología.** Cada una es autocontenida y sigue siempre esa misma
+estructura, así que puedes entrar directamente por la que te interese y leerla de arriba
+abajo, sin que se te mezcle con las demás.
+ 
+**Y una sola aplicación, en `app/`.** Es deliberado: lo que cambia de un lab a otro no es la
+aplicación, es lo que le hacemos. La misma Web API se empaqueta (Docker), se orquesta
+(Kubernetes) y se despliega (CI/CD). Así el esfuerzo se va a la herramienta nueva y no a
+entender otra aplicación distinta cada vez.
 
 ---
 
-## Índice
+## Ruta de aprendizaje
 
-### Apuntes
+El orden no es casual: cada tecnología se apoya en la anterior. Empaquetar la aplicación
+(Docker) es el prerrequisito de orquestarla (Kubernetes); no tiene sentido automatizar el
+despliegue (CI/CD) de algo que aún no sabes desplegar a mano.
 
-| # | Apunte | De qué va |
-|---|---|---|
-| 01 | [Conceptos básicos: imagen, contenedor y puertos](apuntes/01-conceptos-basicos.md) | Qué es cada cosa y por qué se confunden |
-| 02 | [Anatomía de un Dockerfile](apuntes/02-anatomia-dockerfile.md) | Qué hace cada instrucción, línea a línea |
-| 03 | [Chuleta de comandos](apuntes/03-chuleta-comandos.md) | Los comandos del día a día, con qué hace cada uno |
-
-### Labs
-
-| # | Lab | Qué se consigue | Estado |
+| # | Tecnología | Para qué sirve | Estado |
 |---|---|---|---|
-| 01 | [Primera imagen con una API .NET](labs/01-primera-imagen-dotnet/) | Una Web API de .NET corriendo dentro de un contenedor construido por mí | ✅ Hecho |
-| 02 | Multi-stage build | Reducir el tamaño de la imagen separando compilación y ejecución | ⏳ Siguiente |
-| 03 | `.dockerignore`, variables de entorno y usuario no-root | Imagen más limpia y más segura | 🔜 |
-| 04 | Volúmenes y redes | Que los datos sobrevivan al contenedor y que dos contenedores se hablen | 🔜 |
-| 05 | Docker Compose | Levantar API .NET + SQL Server con un solo comando | 🔜 |
+| 1 | [**Docker**](docker/) | Empaquetar la aplicación y sus dependencias en una imagen que corre igual en cualquier sitio | 🟢 En curso |
+| 2 | **Kubernetes** | Orquestar muchos contenedores: escalado, reinicios, despliegues sin caída | 🔜 Pendiente |
+| 3 | **Terraform** | Definir la infraestructura como código, en vez de a base de clicks en un panel | 🔜 Pendiente |
+| 4 | **CI/CD** | Que compilar, testear y desplegar ocurra solo en cada push | 🔜 Pendiente |
+| 5 | **Azure** | La nube donde acaba corriendo todo lo anterior | 🔜 Pendiente |
+| 6 | **Observabilidad** | Logs, métricas y trazas: saber qué está pasando ahí dentro | 🔜 Pendiente |
+
+Cada carpeta aparece en el repo cuando arranca su bloque. Prefiero un repo con una
+tecnología bien documentada que seis carpetas vacías.
 
 ---
 
 ## Requisitos para seguir los labs
 
 - Docker instalado y funcionando (`docker run hello-world` debe responder).
-- SDK de .NET (yo uso el que tenga instalado; cada lab indica el tag de imagen).
-- Ganas de romper cosas en una máquina que no importe. Yo uso una VM de VirtualBox.
+- SDK de .NET (cada lab indica el tag de imagen que usa).
+- Una máquina donde no importe romper cosas. Yo uso una VM de VirtualBox con Ubuntu Server.
+
+---
+
+## Otros repos de esta serie
+
+Este repo es uno de tres, montados con la misma estructura de "asignatura":
+
+| Repo | De qué va |
+|---|---|
+| [`cloud-devops-lab`](https://github.com/Manueh9/cloud-devops-lab) | Este: Docker, Kubernetes, Terraform, CI/CD, Azure, observabilidad |
+| [`security-lab`](https://github.com/Manueh9/security-lab) | Seguridad web: PortSwigger Web Security Academy y OWASP Juice Shop |
+| [`ml-lab`](https://github.com/Manueh9/ml-lab) | IA/ML con Python: datos, modelos y llevarlos a producción |
 
 ---
 
