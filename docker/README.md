@@ -9,8 +9,7 @@ contenedores, los pipelines de CI/CD construyen imágenes, y en la nube se despl
 contenedores. Sin esto, lo demás no se sostiene.
 
 > Los ejemplos usan una Web API de .NET porque es mi terreno, pero los conceptos son los
-> mismos con cualquier lenguaje. Donde una analogía de programación orientada a objetos
-> ayuda, la uso.
+> mismos con cualquier lenguaje.
 
 ⬆️ [Volver a la portada del repo](../README.md)
 
