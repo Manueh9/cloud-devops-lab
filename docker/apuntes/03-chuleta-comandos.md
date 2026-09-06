@@ -120,9 +120,9 @@ docker build -f docker/labs/02-multi-stage/Dockerfile -t myapp:prod .
 
 El contexto es ./services/api (solo se envían esos archivos al daemon), y el Dockerfile está en ops/dockerfiles/. Son dos parámetros independientes. 
 
--  -t / --tag	nombre:etiqueta	
+-  -t / --tag	nombre:etiqueta
   - Asigna un nombre (y opcionalmente una etiqueta) a la imagen resultante.  Sin él, la imagen queda como sha256:abc123... (inútil para recordar). Puedes poner varios: -t app:v1 -t app:latest
--  -f / --file	ruta/Dockerfile	
+-  -f / --file	ruta/Dockerfile
   - Indica dónde está el Dockerfile. Por defecto busca ./Dockerfile en la raíz del contexto. Si tu Dockerfile se llama Dockerfile.prod o está en otra carpeta, lo señalas aquí.
 
 ```bash
