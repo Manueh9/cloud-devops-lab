@@ -107,13 +107,32 @@ docker stop api && docker rm api                      # 6. recoger
 
 ---
 
-## Otros comandos
+## Otros comandos y datos importantes
+
+### 1. Dockerfile en otra carpeta, contexto en la actual
+
+- El -f apunta al Dockerfile alternativo; el . (contexto) sigue siendo el directorio actual. Los COPY/ADD del Dockerfile se resuelven relativos al contexto, no a la ubicación del Dockerfile
+
+```bash
+docker build -f docker/labs/02-multi-stage/Dockerfile -t myapp:prod .
+```
+### 2. Contexto en otra carpeta, Dockerfile en otra
+
+El contexto es ./services/api (solo se envían esos archivos al daemon), y el Dockerfile está en ops/dockerfiles/. Son dos parámetros independientes. 
+
+-  -t / --tag	nombre:etiqueta	
+  - Asigna un nombre (y opcionalmente una etiqueta) a la imagen resultante.  Sin él, la imagen queda como sha256:abc123... (inútil para recordar). Puedes poner varios: -t app:v1 -t app:latest
+-  -f / --file	ruta/Dockerfile	
+  - Indica dónde está el Dockerfile. Por defecto busca ./Dockerfile en la raíz del contexto. Si tu Dockerfile se llama Dockerfile.prod o está en otra carpeta, lo señalas aquí.
 
 ```bash
 docker build -f docker/labs/02-multi-stage/Dockerfile -t dockerlab:v2 app/DockerLab
-
 ```
+### 3.DockerFile y contexto en la carpeta actual
 
+```bash
+docker build -t dockerlab:v1 .
+```
 
 ---
 ## Para leer más
