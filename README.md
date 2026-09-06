@@ -40,8 +40,7 @@ despliegue (CI/CD) de algo que aún no sabes desplegar a mano.
 | 5 | **Azure** | La nube donde acaba corriendo todo lo anterior | 🔜 Pendiente |
 | 6 | **Observabilidad** | Logs, métricas y trazas: saber qué está pasando ahí dentro | 🔜 Pendiente |
 
-Cada carpeta aparece en el repo cuando arranca su bloque. Prefiero un repo con una
-tecnología bien documentada que seis carpetas vacías.
+Cada carpeta aparece en el repo cuando arranca su bloque.
 
 ---
 
