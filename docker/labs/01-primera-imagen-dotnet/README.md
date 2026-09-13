@@ -113,9 +113,6 @@ curl http://localhost:8080/weatherforecast
 
 ## Resultado
 
-<details>
-<summary>Solución</summary>
-
 ```console
 $ curl http://localhost:8080/weatherforecast
 [{"date":"2026-08-27","temperatureC":-14,"summary":"Chilly","temperatureF":7},
@@ -124,9 +121,6 @@ $ curl http://localhost:8080/weatherforecast
  {"date":"2026-08-30","temperatureC":23,"summary":"Mild","temperatureF":73},
  {"date":"2026-08-31","temperatureC":15,"summary":"Mild","temperatureF":58}]
 ```
-
-</details>
-
 
 ### Tamaño de la imagen
 
