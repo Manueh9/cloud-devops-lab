@@ -57,16 +57,12 @@ docker images
 
 ### Salida de `docker images`
 
-<section>
 
-<summary>Solución</summary>
 ```console
 $ docker images dockerlab:v2
 IMAGE          ID             DISK USAGE   CONTENT SIZE   EXTRA
 dockerlab:v2   3ebab80a7c89        324MB         91.2MB    U   
 ```
-
-
 
 ### Comparativa
 
@@ -86,8 +82,6 @@ $ curl http://localhost:8081/weatherforecast
  {"date":"2026-09-07","temperatureC":-10,"summary":"Cool","temperatureF":15},
  {"date":"2026-09-08","temperatureC":41,"summary":"Scorching","temperatureF":105}]
 ```
-
-</section>
 
 ---
 
