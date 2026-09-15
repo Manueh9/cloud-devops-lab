@@ -23,6 +23,8 @@ contenedores. Sin esto, lo demás no se sostiene.
 | 02 | [Anatomía de un Dockerfile](apuntes/02-anatomia-dockerfile.md) | Qué hace cada instrucción, línea a línea |
 | 03 | [Chuleta de comandos](apuntes/03-chuleta-comandos.md) | Los comandos del día a día, con qué hace cada uno |
 | 04 | [Multi-stage builds](apuntes/04-multi-stage.md) | Por qué la imagen pesa de más y cómo separar compilación de ejecución |
+| 05 | [Imagen limpia: `.dockerignore`, env y no-root](apuntes/05-imagen-limpia.md) | Contexto de build, configuración fuera de la imagen y usuario sin privilegios |
+
 
 ## Labs (un ejercicio por sesión)
 
@@ -30,7 +32,7 @@ contenedores. Sin esto, lo demás no se sostiene.
 |---|---|---|---|
 | 01 | [Primera imagen con una API .NET](labs/01-primera-imagen-dotnet/) | Una Web API de .NET corriendo dentro de un contenedor construido por mí | ✅ Hecho |
 | 02 | [Multi-stage build](labs/02-multi-stage/) | La misma API en una imagen que pesa una fracción de la del lab 01 | ✅ Hecho |
-| 03 | `.dockerignore`, variables de entorno y usuario no-root | Imagen más limpia y más segura | ⏳ Siguiente |
+| 03 | [.dockerignore`, env vars, usuario no-root](labs/03-imagen-limpia/) | Imagen más limpia y más segura | ✅ Hecho |
 | 04 | Caché de capas | Builds mucho más rápidos aprovechando lo que Docker ya tiene hecho | 🔜 |
 | 05 | Volúmenes y redes | Que los datos sobrevivan al contenedor y que dos contenedores se hablen | 🔜 |
 | 06 | Docker Compose | Levantar API .NET + SQL Server con un solo comando | 🔜 |

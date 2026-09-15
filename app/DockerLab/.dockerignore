@@ -1,0 +1,21 @@
+# Resultados de compilación: se generan dentro del contenedor, no hace falta mandarlos.
+bin/
+obj/
+
+# Carpetas de IDE y de herramientas
+.vs/
+.vscode/
+.idea/
+
+# Control de versiones
+.git/
+.gitignore
+
+# Ficheros propios de Docker
+Dockerfile*
+.dockerignore
+
+# Varios
+*.user
+*.suo
+**/node_modules/

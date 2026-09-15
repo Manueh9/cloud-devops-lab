@@ -173,5 +173,5 @@ La ruta que había que cambiar es la del `ENTRYPOINT`: de `out/DockerLab.dll` a
 ---
 
 ⬅️ Anterior: [03 · Chuleta de comandos](03-chuleta-comandos.md)
-➡️ Siguiente: (pendiente) 05 · `.dockerignore`, variables de entorno y usuario no-root
+➡️ Siguiente: [05 · Chuleta de comandos](05-imagen-limpia.md)
 🧪 Lab que aplica este apunte: [02 · Multi-stage build](../labs/02-multi-stage/)
