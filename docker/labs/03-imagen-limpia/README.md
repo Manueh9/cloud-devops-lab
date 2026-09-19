@@ -124,5 +124,5 @@ docker rmi dockerlab:v2-recontexto
 ---
 
 ⬅️ Anterior: [lab 02 · Multi-stage build](../02-multi-stage/)
-➡️ Siguiente: *(pendiente)*
+➡️ Siguiente: [lab 04 · Cache de capas](../04-cache-de-capas)
 🏠 [Índice de Docker](../../README.md) · [Portada del repo](../../../README.md)
