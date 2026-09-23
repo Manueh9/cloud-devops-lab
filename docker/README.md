@@ -35,8 +35,9 @@ contenedores. Sin esto, lo demás no se sostiene.
 | 02 | [Multi-stage build](labs/02-multi-stage/) | La misma API en una imagen que pesa una fracción de la del lab 01 | ✅ Hecho |
 | 03 | [.dockerignore`, env vars, usuario no-root](labs/03-imagen-limpia/) | Imagen más limpia y más segura | ✅ Hecho |
 | 04 | [Caché de capas](labs/04-cache-de-capas/) | Builds mucho más rápidos aprovechando lo que Docker ya tiene hecho | ✅ Hecho |
-| 05 | Volúmenes y redes | Que los datos sobrevivan al contenedor y que dos contenedores se hablen | ⏳ Siguiente |
-| 06 | Docker Compose | Levantar API .NET + SQL Server con un solo comando | 🔜 |
+| 05 | [Volúmenes](labs/05-volumenes/) | Que los datos sobrevivan a la destrucción del contenedor | ⏳ Siguiente |
+| 06 | [Redes](labs/06-redes/) | Que dos contenedores se encuentren por nombre | 🔜 |
+| 07 | [Docker Compose](labs/07-compose/) | Levantar API .NET + base de datos con un solo comando | 🔜 |
 
 ---
 
