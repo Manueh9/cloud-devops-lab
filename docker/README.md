@@ -25,7 +25,7 @@ contenedores. Sin esto, lo demás no se sostiene.
 | 04 | [Multi-stage builds](apuntes/04-multi-stage.md) | Por qué la imagen pesa de más y cómo separar compilación de ejecución |
 | 05 | [Imagen limpia: `.dockerignore`, env y no-root](apuntes/05-imagen-limpia.md) | Contexto de build, configuración fuera de la imagen y usuario sin privilegios |
 | 06 | [Caché de capas](apuntes/06-cache-de-capas.md) | Capas, invalidación en cascada y `dotnet restore` adelantado |
-
+| 07 | [Volúmenes](apuntes/07-volumenes.md) | Capa de escritura, volumen frente a bind mount, punto de montaje |
 
 ## Labs (un ejercicio por sesión)
 
@@ -35,8 +35,8 @@ contenedores. Sin esto, lo demás no se sostiene.
 | 02 | [Multi-stage build](labs/02-multi-stage/) | La misma API en una imagen que pesa una fracción de la del lab 01 | ✅ Hecho |
 | 03 | [.dockerignore`, env vars, usuario no-root](labs/03-imagen-limpia/) | Imagen más limpia y más segura | ✅ Hecho |
 | 04 | [Caché de capas](labs/04-cache-de-capas/) | Builds mucho más rápidos aprovechando lo que Docker ya tiene hecho | ✅ Hecho |
-| 05 | [Volúmenes](labs/05-volumenes/) | Que los datos sobrevivan a la destrucción del contenedor | ⏳ Siguiente |
-| 06 | [Redes](labs/06-redes/) | Que dos contenedores se encuentren por nombre | 🔜 |
+| 05 | [Volúmenes](labs/05-volumenes/) | Que los datos sobrevivan a la destrucción del contenedor | ✅ Hecho |
+| 06 | [Redes](labs/06-redes/) | Que dos contenedores se encuentren por nombre | ⏳ Siguiente |
 | 07 | [Docker Compose](labs/07-compose/) | Levantar API .NET + base de datos con un solo comando | 🔜 |
 
 ---
