@@ -31,14 +31,18 @@ El orden no es casual: cada tecnología se apoya en la anterior. Empaquetar la a
 (Docker) es el prerrequisito de orquestarla (Kubernetes); no tiene sentido automatizar el
 despliegue (CI/CD) de algo que aún no sabes desplegar a mano.
 
-| # | Tecnología | Para qué sirve | Estado |
+| # | Tecnología | Para qué | Estado |
 |---|---|---|---|
-| 1 | [**Docker**](docker/) | Empaquetar la aplicación y sus dependencias en una imagen que corre igual en cualquier sitio | 🟢 En curso |
-| 2 | **Kubernetes** | Orquestar muchos contenedores: escalado, reinicios, despliegues sin caída | 🔜 Pendiente |
-| 3 | **Terraform** | Definir la infraestructura como código, en vez de a base de clicks en un panel | 🔜 Pendiente |
-| 4 | **CI/CD** | Que compilar, testear y desplegar ocurra solo en cada push | 🔜 Pendiente |
-| 5 | **Azure** | La nube donde acaba corriendo todo lo anterior | 🔜 Pendiente |
-| 6 | **Observabilidad** | Logs, métricas y trazas: saber qué está pasando ahí dentro | 🔜 Pendiente |
+| 1 | Docker | Empaquetar la aplicación y sus dependencias en una imagen que corre igual en cualquier sitio | ✅ Terminado |
+| 2 | Azure | La nube donde va a correr todo: recursos, redes, identidades y almacenamiento, primero a mano | 🟢 Siguiente |
+| 3 | CI/CD | Que compilar, testear, analizar la seguridad y desplegar ocurra solo en cada push | 🔜 Pendiente |
+| 4 | Terraform | Definir la infraestructura como código, en vez de a base de clicks en un panel | 🔜 Pendiente |
+| 5 | Kubernetes | Orquestar muchos contenedores: escalado, reinicios, despliegues sin caída | 🔜 Pendiente |
+| 6 | Observabilidad | Logs, métricas y trazas: saber qué está pasando ahí dentro | 🔜 Pendiente |
+| 7 | Mensajería | Sacar el trabajo lento fuera de la petición con colas (RabbitMQ, Kafka) | 🔜 Pendiente |
+| 8 | AWS | Las equivalencias en la otra gran nube, cuando Azure esté sólido | 🔜 Pendiente |
+
+El orden es deliberado: primero se hacen las cosas a mano (Docker, Azure), después se automatizan (CI/CD, Terraform) y se orquestan (Kubernetes). Automatizar lo que nunca has hecho a mano es memorizar sin entender.
 
 Cada carpeta aparece en el repo cuando arranca su bloque.
 
