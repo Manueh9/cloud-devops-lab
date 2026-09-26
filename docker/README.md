@@ -1,8 +1,8 @@
 # 🐳 Docker
 
-Primera parada de la ruta. Docker resuelve un problema muy concreto: **empaquetar tu
-aplicación con todo lo que necesita para arrancar**, de forma que corra igual en tu portátil,
-en el de un compañero y en un servidor de producción.
+Primera parada de la ruta, y **completada**. Docker resuelve un problema muy concreto:
+**empaquetar tu aplicación con todo lo que necesita para arrancar**, de forma que corra igual
+en tu portátil, en el de un compañero y en un servidor de producción.
 
 Es también el prerrequisito de casi todo lo que viene después: Kubernetes orquesta
 contenedores, los pipelines de CI/CD construyen imágenes, y en la nube se despliegan
@@ -27,6 +27,7 @@ contenedores. Sin esto, lo demás no se sostiene.
 | 06 | [Caché de capas](apuntes/06-cache-de-capas.md) | Capas, invalidación en cascada y `dotnet restore` adelantado |
 | 07 | [Volúmenes](apuntes/07-volumenes.md) | Capa de escritura, volumen frente a bind mount, punto de montaje |
 | 08 | [Redes](apuntes/08-redes.md) | Red propia con DNS interno, y por qué `-p` es solo para fuera |
+| 09 | [Docker Compose](apuntes/09-compose.md) | Varios contenedores como un solo sistema: servicios, healthcheck y `down` vs `down -v` |
 
 ## Labs (un ejercicio por sesión)
 
@@ -34,11 +35,11 @@ contenedores. Sin esto, lo demás no se sostiene.
 |---|---|---|---|
 | 01 | [Primera imagen con una API .NET](labs/01-primera-imagen-dotnet/) | Una Web API de .NET corriendo dentro de un contenedor construido por mí | ✅ Hecho |
 | 02 | [Multi-stage build](labs/02-multi-stage/) | La misma API en una imagen que pesa una fracción de la del lab 01 | ✅ Hecho |
-| 03 | [.dockerignore`, env vars, usuario no-root](labs/03-imagen-limpia/) | Imagen más limpia y más segura | ✅ Hecho |
+| 03 | [`.dockerignore`, env vars, usuario no-root](labs/03-imagen-limpia/) | Imagen más limpia y más segura | ✅ Hecho |
 | 04 | [Caché de capas](labs/04-cache-de-capas/) | Builds mucho más rápidos aprovechando lo que Docker ya tiene hecho | ✅ Hecho |
 | 05 | [Volúmenes](labs/05-volumenes/) | Que los datos sobrevivan a la destrucción del contenedor | ✅ Hecho |
 | 06 | [Redes](labs/06-redes/) | Que dos contenedores se encuentren por nombre | ✅ Hecho |
-| 07 | [Docker Compose](labs/07-compose/) | Levantar API .NET + base de datos con un solo comando | ⏳ Siguiente |
+| 07 | [Docker Compose](labs/07-compose/) | Levantar API .NET + BD con un solo comando | ✅ Hecho |
 
 ---
 
@@ -48,4 +49,20 @@ Lee los apuntes 01 y 02, y en cuanto los entiendas haz el lab 01. Docker se enti
 haciéndolo: la primera vez que ves tu propia aplicación respondiendo desde dentro de un
 contenedor, la mitad de los conceptos encajan solos.
 
-➡️ Siguiente tecnología de la ruta: Kubernetes (aún no empezada)
+A partir de ahí, los labs van de menos a más y cada uno se apoya en el anterior: una imagen
+(01) → hacerla ligera (02) → limpia y segura (03) → rápida de construir (04) → con estado que
+persiste (05) → hablando con otro contenedor (06) → y todo junto, orquestado con un fichero
+(07). Ese último cierra el recorrido: una API .NET y su base de datos levantándose juntas con
+un solo comando.
+
+---
+
+## Estado
+
+**Docker: terminado.** Cubre desde la primera imagen hasta un sistema de varios contenedores
+con Docker Compose (persistencia, red interna y arranque ordenado con healthchecks).
+
+Lo que queda fuera a propósito, porque ya es terreno del orquestador: réplicas, reprogramación
+si un nodo cae y despliegue sin corte. Eso es Kubernetes.
+
+➡️ Siguiente tecnología de la ruta: **Kubernetes** (aún no empezada).

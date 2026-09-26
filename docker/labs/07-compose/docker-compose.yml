@@ -1,0 +1,32 @@
+name: lab07
+
+services:
+  basedatos:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_PASSWORD: "Docker!Lab2026"
+      POSTGRES_DB: labdocker
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d labdocker"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build:
+      context: ../../../app/DockerLab
+      dockerfile: ../../docker/labs/07-compose/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: "Host=basedatos;Database=labdocker;Username=postgres;Password=Docker!Lab2026"
+    ports:
+      - "8080:8080"
+    depends_on:
+      basedatos:
+        condition: service_healthy
+
+volumes:
+  pgdata:
