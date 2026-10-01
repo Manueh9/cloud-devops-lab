@@ -57,12 +57,13 @@ un solo comando.
 
 ---
 
-## Estado
+## Y ahora, ¿qué?
 
-**Docker: terminado.** Cubre desde la primera imagen hasta un sistema de varios contenedores
-con Docker Compose (persistencia, red interna y arranque ordenado con healthchecks).
+Docker está cerrado: sabes construir una imagen, adelgazarla, aprovechar la caché, guardar el
+estado en un volumen, conectar contenedores por nombre y levantar el sistema entero con un
+`docker compose up`.
 
-Lo que queda fuera a propósito, porque ya es terreno del orquestador: réplicas, reprogramación
-si un nodo cae y despliegue sin corte. Eso es Kubernetes.
-
-➡️ Siguiente tecnología de la ruta: **Kubernetes** (aún no empezada).
+Lo siguiente **no** es Kubernetes. Orquestar contenedores tiene sentido cuando ya hay un sitio
+donde ponerlos y alguien que lo pague: por eso el paso siguiente es **[Azure](../azure/)** —
+entender la nube, desplegar a mano y aprender a no gastar. Kubernetes llega más adelante, después
+de automatizar el despliegue (CI/CD) y de describir la infraestructura como código (Terraform).

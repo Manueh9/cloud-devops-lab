@@ -27,24 +27,14 @@ entender otra aplicación distinta cada vez.
 
 ## Ruta de aprendizaje
 
-El orden no es casual: cada tecnología se apoya en la anterior. Empaquetar la aplicación
-(Docker) es el prerrequisito de orquestarla (Kubernetes); no tiene sentido automatizar el
-despliegue (CI/CD) de algo que aún no sabes desplegar a mano.
-
-| # | Tecnología | Para qué | Estado |
+| # | Tecnología | Para qué sirve | Estado |
 |---|---|---|---|
-| 1 | Docker | Empaquetar la aplicación y sus dependencias en una imagen que corre igual en cualquier sitio | ✅ Terminado |
-| 2 | Azure | La nube donde va a correr todo: recursos, redes, identidades y almacenamiento, primero a mano | 🟢 Siguiente |
-| 3 | CI/CD | Que compilar, testear, analizar la seguridad y desplegar ocurra solo en cada push | 🔜 Pendiente |
-| 4 | Terraform | Definir la infraestructura como código, en vez de a base de clicks en un panel | 🔜 Pendiente |
-| 5 | Kubernetes | Orquestar muchos contenedores: escalado, reinicios, despliegues sin caída | 🔜 Pendiente |
-| 6 | Observabilidad | Logs, métricas y trazas: saber qué está pasando ahí dentro | 🔜 Pendiente |
-| 7 | Mensajería | Sacar el trabajo lento fuera de la petición con colas (RabbitMQ, Kafka) | 🔜 Pendiente |
-| 8 | AWS | Las equivalencias en la otra gran nube, cuando Azure esté sólido | 🔜 Pendiente |
-
-El orden es deliberado: primero se hacen las cosas a mano (Docker, Azure), después se automatizan (CI/CD, Terraform) y se orquestan (Kubernetes). Automatizar lo que nunca has hecho a mano es memorizar sin entender.
-
-Cada carpeta aparece en el repo cuando arranca su bloque.
+| 1 | [Docker](docker/) | Empaquetar la aplicación y sus dependencias en una imagen que corre igual en cualquier sitio | ✅ Completo |
+| 2 | [Azure](azure/) | La nube donde viven los recursos: dónde se despliega, cuánto cuesta y cómo se apaga | 🔄 En curso |
+| 3 | CI/CD | Compilar, probar y desplegar solo, en cada commit | ⏳ Pendiente |
+| 4 | Terraform | Describir la infraestructura en código en vez de crearla a clics | ⏳ Pendiente |
+| 5 | Kubernetes | Orquestar muchos contenedores: escalado y despliegues sin corte | ⏳ Pendiente |
+| 6 | Observabilidad | Logs, métricas y trazas para saber qué hace el sistema por dentro | ⏳ Pendiente |
 
 ---
 
