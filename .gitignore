@@ -38,3 +38,8 @@ Thumbs.db
 # ---- Docker ----
 # (los Dockerfile SÍ se suben: son parte de los apuntes)
 docker-compose.override.yml
+
+# Azure CLI: estado local de despliegue (az webapp up)
+.azure/
+publicar/
+app.zip

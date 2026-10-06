@@ -17,13 +17,16 @@ Associate).
 |---|---|---|
 | 01 | [El andamiaje de Azure](apuntes/01-el-andamiaje-de-azure.md) | Suscripción, grupo de recursos y recurso; la región; y por qué el grupo es la unidad de borrado |
 | 02 | [La terminal: Azure CLI](apuntes/02-azure-cli.md) | `az`, la forma de los comandos, el MFA, nombres únicos y por qué ser dueño no da acceso a los datos |
+| 03 | [App Service](apuntes/03-app-service.md) | PaaS, que por debajo es un contenedor; plan contra web app; el nivel F1; dónde se termina el TLS y dónde se compila el código |
+
+
 ## Labs
 
 | # | Lab | Qué se hace | Estado |
 |---|---|---|---|
 | 01 | [Primer grupo de recursos](labs/01-primer-grupo-de-recursos/) | Crear un grupo y un Storage Account en el portal, subir un blob, poner una alerta de gasto y borrarlo todo | ✅ Completo |
 | 02 | [Los mismos recursos, desde la terminal](labs/02-az-cli/) | Grupo, storage, contenedor y blob con `az`, en dos scripts que se repiten | ✅ Completo |
-
+| 03 | [La API .NET en App Service](labs/03-app-service/) | Desplegar la API en una URL pública con `az webapp up` y leer en los logs qué hace por dentro | 🔄 Parte 1 de 2 |
 
 ## La regla de esta carpeta
 
