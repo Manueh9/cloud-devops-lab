@@ -26,7 +26,8 @@ Associate).
 |---|---|---|---|
 | 01 | [Primer grupo de recursos](labs/01-primer-grupo-de-recursos/) | Crear un grupo y un Storage Account en el portal, subir un blob, poner una alerta de gasto y borrarlo todo | ✅ Completo |
 | 02 | [Los mismos recursos, desde la terminal](labs/02-az-cli/) | Grupo, storage, contenedor y blob con `az`, en dos scripts que se repiten | ✅ Completo |
-| 03 | [La API .NET en App Service](labs/03-app-service/) | Desplegar la API en una URL pública con `az webapp up` y leer en los logs qué hace por dentro | 🔄 Parte 1 de 2 |
+| 03 | [La API .NET en App Service](labs/03-app-service/) | Desplegar con `az webapp up` y después con las cuatro piezas por separado; quién compila, quién nombra y quién factura | ✅ Completo |
+
 
 ## La regla de esta carpeta
 
