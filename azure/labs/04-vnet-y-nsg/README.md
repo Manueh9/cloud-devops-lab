@@ -1,7 +1,7 @@
 # Lab 04 · VNet y NSG: quién puede entrar
 
 > Anterior: [lab 03 · La API .NET en App Service](../03-app-service/)
-> Teoría: [apuntes/04-redes-vnet-y-nsg.md](../../apuntes/04-redes-vnet-y-nsg.md)
+> Teoría: [apuntes/04-redes-vnet-nsg.md](../../apuntes/04-redes-vnet-y-nsg.md)
 
 ## Objetivo
 
