@@ -76,11 +76,8 @@ de fuera hacia dentro  →  cerrado por defecto
 de dentro hacia fuera  →  abierto por defecto
 ```
 
-Mi salida real de `az network nsg rule list --include-default`:
-
-```
-<<PEGA AQUÍ>>
-```
+> Esta tabla es la de la documentación oficial. El lab que acompaña al apunte es teórico: muestra
+> los comandos y la salida esperada, sin ejecutar.
 
 ## 4. Dos sitios donde puede colgar un NSG
 
@@ -98,38 +95,8 @@ Una conexión bloqueada por NSG **no da "conexión rechazada": se queda colgada 
 tiempo**. El paquete se descarta en silencio. Es intencionado: responder confirmaría que hay algo
 al otro lado.
 
-## 6. Lo que cuesta y lo que no
 
-| Gratis | Factura |
-|---|---|
-| VNet, subredes, NSG y sus reglas | La máquina virtual |
-| | Su disco |
-| | La IP pública (SKU Standard) |
-
-Y el detalle que más dinero cuesta olvidar, de la documentación oficial:
-
-> *"By default, disks, NICs, and Public IPs associated with a VM are persisted when the VM is
-> deleted."*
-
-Borrar la máquina deja viva su tarjeta de red y su IP pública. **La única limpieza fiable es borrar
-el grupo de recursos entero.**
-
-## 7. Mis cifras de este lab
-
-| Dato | Valor |
-|---|---|
-| Rango de la VNet | `<<PEGA AQUÍ>>` |
-| ¿Azure creó un NSG extra en la NIC? | `<<PENDIENTE: jueves>>` |
-| Qué devolvió el SSH sin regla | `<<PENDIENTE: jueves>>` |
-| Qué devolvió con la denegación en la prioridad 90 | `<<PENDIENTE: jueves>>` |
-| Recursos que sobrevivieron a `az vm delete` | `<<PENDIENTE: jueves>>` |
-| Coste real de la sesión | `<<PENDIENTE: jueves>>` |
-
-## 8. Lo que costó
-
-<<PEGA AQUÍ una o dos frases.>>
-
-## 9. Dónde enlaza con el resto
+## 6. Dónde enlaza con el resto
 
 - Con **ciberseguridad**: denegar por defecto y conceder lo mínimo es el mismo principio que
   `[Authorize]` en cada endpoint. Esconder no es proteger, ni una URL ni un puerto.
