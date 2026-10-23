@@ -18,7 +18,8 @@ Associate).
 | 01 | [El andamiaje de Azure](apuntes/01-el-andamiaje-de-azure.md) | Suscripción, grupo de recursos y recurso; la región; y por qué el grupo es la unidad de borrado |
 | 02 | [La terminal: Azure CLI](apuntes/02-azure-cli.md) | `az`, la forma de los comandos, el MFA, nombres únicos y por qué ser dueño no da acceso a los datos |
 | 03 | [App Service](apuntes/03-app-service.md) | PaaS, que por debajo es un contenedor; plan contra web app; el nivel F1; dónde se termina el TLS y dónde se compila el código |
-
+| 04 | [Redes: VNet y NSG](apuntes/04-redes-vnet-nsg.md) | La red privada y sus subredes, las reglas por prioridad, las seis reglas por defecto y qué sobrevive a borrar una VM |
+| 05 | [Entra ID y RBAC](apuntes/05-entra-id-rbac.md) | Las tres piezas de un permiso, los ámbitos, por qué los permisos suman y gestión frente a datos |
 
 ## Labs
 
@@ -27,7 +28,8 @@ Associate).
 | 01 | [Primer grupo de recursos](labs/01-primer-grupo-de-recursos/) | Crear un grupo y un Storage Account en el portal, subir un blob, poner una alerta de gasto y borrarlo todo | ✅ Completo |
 | 02 | [Los mismos recursos, desde la terminal](labs/02-az-cli/) | Grupo, storage, contenedor y blob con `az`, en dos scripts que se repiten | ✅ Completo |
 | 03 | [La API .NET en App Service](labs/03-app-service/) | Desplegar con `az webapp up` y después con las cuatro piezas por separado; quién compila, quién nombra y quién factura | ✅ Completo |
-
+| 04 | [VNet y NSG](labs/04-vnet-y-nsg/) | Red privada con dos subredes y un NSG; la prioridad de las reglas y qué sobrevive a borrar una VM | 📘 Teórico |
+| 05 | [Entra ID y RBAC](labs/05-entra-id-y-rbac/) | Un grupo de Entra ID con tres roles en tres ámbitos, y qué puede hacer en cada escalón | 📘 Teórico |
 
 ## La regla de esta carpeta
 

@@ -1,6 +1,6 @@
 # 04 · Redes en Azure: VNet, subredes y grupos de seguridad de red
 
-> Anterior: [03 · App Service](03-app-service.md) · Siguiente: *(pendiente)*
+> Anterior: [03 · App Service](03-app-service.md) · Siguiente: [05 · Entra ID y RBAC](05-entra-id-y-rbac.md)
 > Lab que lo acompaña: [labs/04-vnet-y-nsg](../labs/04-vnet-y-nsg/)
 
 Los apuntes anteriores iban de **dónde** vive una aplicación. Este va de **quién puede llegar a
